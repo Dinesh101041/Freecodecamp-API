@@ -4,12 +4,21 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <BiBrain/>
-      <h1>Artificial Intelligence</h1>
+    <div>
+      <div className="App">
+        <BiBrain/>
+        <p>Artificial Intelligence</p>
+      </div>
 
+      <div className="App">
+        <BiBrain/>
+        <p>Artificial Intelligence</p>
+      </div>
     </div>
+  
+   
   );
 }
+
 
 export default App;
