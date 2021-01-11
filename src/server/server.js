@@ -14,5 +14,5 @@ const io = socketio(server);
 app.use(bodyParser.json());
 
 server.listen(port, () => {
-    console.log('server is up');
+    console.log('server is Running on Port',port);
 });
