@@ -19,11 +19,11 @@ function App() {
           </Col>
           <Col>
             <BiBrain/>
-            <p>Artificial Intelligence</p>`
+            <p>Artificial Intelligence</p>
           </Col>
           <Col>
             <BiBrain/>
-            <p>Artificial Intelligence</p>`
+            <p>Artificial Intelligence</p>
           </Col>
           
         </Row>
