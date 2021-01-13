@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Container>
         <Row>
-          <Col>
+          <Col onclick>
             <BiBrain/>
             <p>Artificial Intelligence</p>
           </Col>
