@@ -4,6 +4,7 @@ import { FaBrain,FaCogs } from "react-icons/fa";
 import { IoHardwareChip } from "react-icons/io5";
 import { BsFillShieldLockFill } from "react-icons/bs";
 import { AiFillAndroid,AiFillCloud ,AiFillDatabase} from "react-icons/ai";
+import { GrPersonalComputer } from "react-icons/gr";
 //  import {Row,Container,Col} from "react-bootstrap";
 //  import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -58,6 +59,15 @@ function App() {
           <h4>Hardware</h4>
         </div>
 
+      </div>
+
+
+      <div className="first">
+
+        <div className="hello">
+          <GrPersonalComputer></GrPersonalComputer>
+          <h4>Information Tecnhology</h4>
+        </div>
 
       </div>
 
