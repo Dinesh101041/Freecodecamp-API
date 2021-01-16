@@ -5,32 +5,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
+
   return (
     <div className="App">
-      <Container>
-        <Row>
-          <Col onclick>
-            <BiBrain/>
-            <p>Artificial Intelligence</p>
-          </Col>
-          <Col>
-            <BiBrain/>
-            <p>Artificial Intelligence</p>
-          </Col>
-          <Col>
-            <BiBrain/>
-            <p>Artificial Intelligence</p>
-          </Col>
-          <Col>
-            <BiBrain/>
-            <p>Artificial Intelligence</p>
-          </Col>
-          
-        </Row>
-      </Container>
-      
-
      
+
     </div>
   
    
