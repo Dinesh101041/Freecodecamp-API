@@ -1,6 +1,9 @@
 import React from "react";
-import { BiBrain } from "react-icons/bi";
-import { AiFillAndroid } from "react-icons/ai";
+import { BiBitcoin } from "react-icons/bi";
+import { FaBrain,FaCogs } from "react-icons/fa";
+import { IoHardwareChip } from "react-icons/io5";
+import { BsFillShieldLockFill } from "react-icons/bs";
+import { AiFillAndroid,AiFillCloud ,AiFillDatabase} from "react-icons/ai";
 //  import {Row,Container,Col} from "react-bootstrap";
 //  import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -12,7 +15,7 @@ function App() {
       <div className="first">
         
         <div className="hello" onClick={e => console.log("Clicked")}>
-          <BiBrain></BiBrain>
+          <FaBrain></FaBrain>
           <h4>Artifical Intelligence</h4>
         </div>
 
@@ -20,19 +23,42 @@ function App() {
           <AiFillAndroid></AiFillAndroid>
             <h4>Android</h4>
         </div>
+
+        <div className="hello">
+          <AiFillDatabase></AiFillDatabase>
+          <h4>BigData</h4>
+        </div>
+
+        <div className="hello">
+          <BiBitcoin></BiBitcoin>
+          <h4>BlockChain</h4>
+        </div>
+
       </div>
 
-      <div className="start">
+      <div className="first">
+
+        <div className="hello">
+          <AiFillCloud></AiFillCloud>
+          <h4>Cloud</h4>
+        </div>
         
         <div className="hello">
-          <BiBrain></BiBrain>
-            <h4>art</h4>
+          <BsFillShieldLockFill></BsFillShieldLockFill>
+            <h4>Cyber Security</h4>
         </div>
 
         <div className="hello">
-          <BiBrain></BiBrain>
-            <h4>art</h4>
+          <FaCogs></FaCogs>
+          <h4>Engineering</h4>
         </div>
+
+        <div className="hello">
+          <IoHardwareChip></IoHardwareChip>
+          <h4>Hardware</h4>
+        </div>
+
+
       </div>
 
 
