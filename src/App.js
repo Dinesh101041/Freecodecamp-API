@@ -1,5 +1,6 @@
 import React from "react";
 import { BiBrain } from "react-icons/bi";
+import { AiFillAndroid } from "react-icons/ai";
 //  import {Row,Container,Col} from "react-bootstrap";
 //  import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -16,8 +17,8 @@ function App() {
         </div>
 
         <div className="hello">
-          <BiBrain></BiBrain>
-            <h4></h4>
+          <AiFillAndroid></AiFillAndroid>
+            <h4>Android</h4>
         </div>
       </div>
 
