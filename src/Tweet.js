@@ -18,7 +18,6 @@ class Tweet extends Component {
         };
     }
     
-
   render() {
     return (
         <div className="Tweet" >

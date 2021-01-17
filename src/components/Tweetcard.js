@@ -17,8 +17,7 @@ function Tweetcard() {
                 </div> 
 
             </div>
-
-
+            
         </div>
 
 
