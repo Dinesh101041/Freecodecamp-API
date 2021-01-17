@@ -20,17 +20,17 @@ function App() {
           <h4>Artifical Intelligence</h4>
         </div>
 
-        <div className="hello">
+        <div className="hello" onClick={e => console.log("Clicked")}>
           <AiFillAndroid></AiFillAndroid>
             <h4>Android</h4>
         </div>
 
-        <div className="hello">
+        <div className="hello" onClick={e => console.log("Clicked")}>
           <AiFillDatabase></AiFillDatabase>
           <h4>BigData</h4>
         </div>
 
-        <div className="hello">
+        <div className="hello" onClick={e => console.log("Clicked")}>
           <BiBitcoin></BiBitcoin>
           <h4>BlockChain</h4>
         </div>
@@ -39,22 +39,22 @@ function App() {
 
       <div className="first">
 
-        <div className="hello">
+        <div className="hello" onClick={e => console.log("Clicked")}>
           <AiFillCloud></AiFillCloud>
           <h4>Cloud</h4>
         </div>
         
-        <div className="hello">
+        <div className="hello" onClick={e => console.log("Clicked")}>
           <BsFillShieldLockFill></BsFillShieldLockFill>
             <h4>Cyber Security</h4>
         </div>
 
-        <div className="hello">
+        <div className="hello" onClick={e => console.log("Clicked")}>
           <FaCogs></FaCogs>
           <h4>Engineering</h4>
         </div>
 
-        <div className="hello">
+        <div className="hello" onClick={e => console.log("Clicked")}>
           <IoHardwareChip></IoHardwareChip>
           <h4>Hardware</h4>
         </div>
@@ -64,7 +64,7 @@ function App() {
 
       <div className="first">
 
-        <div className="hello">
+        <div className="hello" >
           <GrPersonalComputer></GrPersonalComputer>
           <h4>Information Tecnhology</h4>
         </div>
