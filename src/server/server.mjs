@@ -2,15 +2,15 @@ import express from "express";
 import http from "http"
 import socketIO from "socket.io"
 import path from "path"
-import {Tweet} from "../Tweet.js";
+import {Tweet} from "../Tweet.mjs";
 import needle from "needle";
 
- const http = require('http')
- const path = require('path')
- const express = require('express')
- const socketIo = require('socket.io')
- const needle = require('needle')
- const config = require('dotenv').config()
+// const http = require('http')
+// const path = require('path')
+// const express = require('express')
+// const socketIo = require('socket.io')
+// const needle = require('needle')
+const config = require('dotenv').config()
 const TOKEN = process.env.TWITTER_BEARER_TOKEN
 const PORT = process.env.PORT || 8000
 
