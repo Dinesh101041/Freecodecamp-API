@@ -20,7 +20,7 @@ class Tweet extends Component {
     
   render() {
     return (
-        <div className="Tweet" >
+      <div className="Tweet" >
       <div className="first">
         
         <div className="hello" onClick={() => this.setState({value: '#ArtificialIntelligence'})}>
@@ -88,3 +88,6 @@ class Tweet extends Component {
 }
 
 export default Tweet;
+
+
+ 

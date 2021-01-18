@@ -1,12 +1,18 @@
-const http = require('http')
-const path = require('path')
-const express = require('express')
-const socketIo = require('socket.io')
-const needle = require('needle')
-const config = require('dotenv').config()
+import express from "express";
+import http from "http"
+import socketIO from "socket.io"
+import path from "path"
+import {Tweet} from "../Tweet.js";
+import needle from "needle";
+
+ const http = require('http')
+ const path = require('path')
+ const express = require('express')
+ const socketIo = require('socket.io')
+ const needle = require('needle')
+ const config = require('dotenv').config()
 const TOKEN = process.env.TWITTER_BEARER_TOKEN
 const PORT = process.env.PORT || 8000
-var Tweet = require('../Tweet')
 
 const app = express()
 
@@ -21,7 +27,7 @@ const rulesURL = 'https://api.twitter.com/2/tweets/search/stream/rules'
 const streamURL =
   'https://api.twitter.com/2/tweets/search/stream?tweet.fields=public_metrics&expansions=author_id'
 
-const rules = this.state.value
+const rules = [{ value: 'giveaway' }]
 
 // Get stream rules
 async function getRules() {
