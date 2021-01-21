@@ -1,9 +1,10 @@
 import './App.css';
+import Tweet from './Tweet.js';
 
 function App() {
   return (
     <div className="App">
-      <h1>server</h1>
+      <Tweet/>
     </div>
   );
 }

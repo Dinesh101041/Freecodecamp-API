@@ -5,22 +5,28 @@ const socketIo = require('socket.io')
 const needle = require('needle')
 const config = require('dotenv').config()
 const TOKEN = process.env.TWITTER_BEARER_TOKEN
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 5000
 
 const app = express()
 
 const server = http.createServer(app)
 const io = socketIo(server)
 
+const rules = null;
+
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../', 'client', 'index.html'))
+  res.sendFile(path.resolve(__dirname, '../', 'client','public' , 'index.html'))
+})
+//listen to and obtain the param from the GET request and storing in the rules variable
+app.get('/setvalue',(req, res) =>{
+    rules = req.query.value;
 })
 
 const rulesURL = 'https://api.twitter.com/2/tweets/search/stream/rules'
 const streamURL =
   'https://api.twitter.com/2/tweets/search/stream?tweet.fields=public_metrics&expansions=author_id'
 
-const rules = [{ value: 'giveaway' }]
+
 
 // Get stream rules
 async function getRules() {
