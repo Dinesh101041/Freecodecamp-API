@@ -4,7 +4,7 @@ const express = require('express')
 const socketIo = require('socket.io')
 const needle = require('needle')
 const config = require('dotenv').config()
-const TOKEN = process.env.TWITTER_BEARER_TOKEN
+const TOKEN = process.env.Twitter_Bearer
 const PORT = process.env.PORT || 5000
 
 const app = express()
@@ -12,10 +12,10 @@ const app = express()
 const server = http.createServer(app)
 const io = socketIo(server)
 
-const rules = null;
+var rules = null;
 
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../', 'client','public' , 'index.html'))
+  res.sendFile(path.resolve(__dirname, './', 'client','public' , 'index.html'))
 })
 //listen to and obtain the param from the GET request and storing in the rules variable
 app.get('/setvalue',(req, res) =>{
