@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-class APP extends Component {
+// import { useHistory } from 'react-router-dom';
+
+
+class Tweet extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -14,6 +17,7 @@ class APP extends Component {
         this.setState(state => ({
             value: 'Hai'
         }));
+       
         axios.get('/setvalue?value=Hi')
             .then( function (response){ //used older syntaxes because I didnt very any script by running for errors. Any type can be used.
                 console.log(response)
@@ -25,9 +29,11 @@ class APP extends Component {
     }
 
     handleClickHello(){
+        
         this.setState(state => ({
             value: 'Hello'
         }));
+            
         axios.get('/setvalue?value=Hello')
             .then( function (response){ //used older syntaxes because I didnt very any script by running for errors. Any type can be used.
                 console.log(response)
@@ -37,13 +43,15 @@ class APP extends Component {
             });
 
     }
+  
+   
     
     //removed the inline setState and added 2 handleClick  functions for each button (as they are part of same components).
   render() {
     return (
       <div className="greet" >
         
-        <div className="hello" onClick={this.handleClickHello}>    
+        <div className="hello" onClick={this.handleClickHello} >    
           <h4>Hello</h4>
         </div>
 
@@ -57,4 +65,4 @@ class APP extends Component {
   }
 }
 
-export default APP
+export default Tweet;
