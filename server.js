@@ -5,6 +5,7 @@ const socketIo = require('socket.io')
 const needle = require('needle')
 const config = require('dotenv').config()
 const TOKEN = process.env.Twitter_Bearer
+console.log(TOKEN);
 const PORT = process.env.PORT || 5000
 
 const app = express()
@@ -15,7 +16,7 @@ const io = socketIo(server)
 var rules = null;
 
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './', 'client','public' , 'index.html'))
+  res.sendFile(path.resolve(__dirname, './', 'client','src' , 'main.html'))
 })
 //listen to and obtain the param from the GET request and storing in the rules variable
 app.get('/setvalue',(req, res) =>{

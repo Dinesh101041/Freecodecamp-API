@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import { useHistory } from 'react-router-dom';
+// import { withRouter} from "react-router-dom";
+import {Redirect} from 'react-router-dom';
 
 
 class Tweet extends Component {
@@ -17,7 +18,8 @@ class Tweet extends Component {
         this.setState(state => ({
             value: 'Hai'
         }));
-       
+
+    
         axios.get('/setvalue?value=Hi')
             .then( function (response){ //used older syntaxes because I didnt very any script by running for errors. Any type can be used.
                 console.log(response)
@@ -27,12 +29,15 @@ class Tweet extends Component {
             });
 
     }
-
+      
     handleClickHello(){
+        
         
         this.setState(state => ({
             value: 'Hello'
         }));
+        // this.props.history.push('/main.html');
+
             
         axios.get('/setvalue?value=Hello')
             .then( function (response){ //used older syntaxes because I didnt very any script by running for errors. Any type can be used.
@@ -41,6 +46,9 @@ class Tweet extends Component {
             .catch(function (error) {
                 console.log(error) // any other error handling can be made.
             });
+
+       return  <Redirect  to="/main.html" />   
+
 
     }
   
