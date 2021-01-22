@@ -4,7 +4,9 @@ const express = require('express')
 const socketIo = require('socket.io')
 const needle = require('needle')
 const config = require('dotenv').config()
-const TOKEN = process.env.Twitter_Bearer
+const TOKEN = process.env.TWITTER_BEARER_TOKEN
+
+
 console.log(TOKEN);
 const PORT = process.env.PORT || 5000
 
