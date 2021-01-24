@@ -1,0 +1,22 @@
+{
+  "name": "quora",
+  "version": "1.0.0",
+  "description": "quora api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dinesh101041/none.git"
+  },
+  "author": "Dinesh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dinesh101041/none/issues"
+  },
+  "homepage": "https://github.com/Dinesh101041/none#readme",
+  "dependencies": {
+    "quora-api": "^1.0.1"
+  }
+}
