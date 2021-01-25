@@ -1,18 +1,35 @@
-const quora = require('quora-api');
-const express = require("express");
+const http = require("http")
+const APIS = require('./api.json')
+
+const server = http.createServer((req,res)=> {
+    if(req.url === '/api/analytics' && req.method ==='GET' ){
+       var cal= APIS.filter(function(item){
+            return item.id == "2";         
+        });
+        res.writeHead(200,{'content-type':'application/json'})
+        res.end(JSON.stringify(cal))
+    }else{
+        res.writeHead(200,{'content-type':'application/json'})
+        res.end(JSON.stringify({message:'Route not found'}))
+    }
+
+    if(req.url === '/api/analytics' && req.method ==='GET' ){
+        var cal= APIS.filter(function(item){
+             return item.id == "2";         
+         });
+         res.writeHead(200,{'content-type':'application/json'})
+         res.end(JSON.stringify(cal))
+     }else{
+         res.writeHead(200,{'content-type':'application/json'})
+         res.end(JSON.stringify({message:'Route not found'}))
+     }
 
 
 
-// create server
-const app = express();
-
-'use strict';
-const port = process.env.PORT || 5000;
-
-app.listen(port, () => console.log(`Server running on port ${port} 🔥`));
 
 
-    quora.answer('What-is-JavaScript').then(answer => {
-        console.log(answer);
-    });
+})
 
+const PORT = process.env.PORT || 5000
+
+server.listen(PORT,()=> console.log(`server running on port  ${PORT}`))
