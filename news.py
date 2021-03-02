@@ -8,7 +8,7 @@ def getnews(value):
         else:
             r=requests.get(f"https://slatekuchi.com/{value}").text
         soup=bs(r,'lxml')
-        x=soup.find_all('div',class_="pt-cv-content-item")
+        x=soup.find_all('div',class_="pt-cv-page")
         val={}
         val["data"]=[]
         for i in range(0,len(x)):
