@@ -9,6 +9,7 @@ print(len(hack))
 dic=[]
 for i in range(0,len(hack)):
     data={}
+    data["company-name"] =[element.text for element in hack[i].find_all("div", "company-details ellipsis").split]
     data["Event-link"] = hack[i].find('a',class_='challenge-card-wrapper').get('href','')
     dic.append(data)
 print(dic)
