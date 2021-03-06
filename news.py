@@ -9,7 +9,7 @@ print(len(hack))
 dic=[]
 for i in range(0,len(hack)):
     data={}
-    dic["Event-link"] = hack[i].find('a',class_='challenge-card-wrapper challenge-card-link').text
+    data["Event-link"] = hack[i].find('a',class_='challenge-card-wrapper').get('href','')
     dic.append(data)
 print(dic)
 
