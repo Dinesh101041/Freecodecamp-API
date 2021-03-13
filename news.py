@@ -8,8 +8,10 @@ print(len(hack))
 dic=[]
 for i in range(0,len(hack)):
     data={}
-    data["company-name"] =[element.text for element in hack[i].find_all("div", "company-details ellipsis")]
-    data["Event-link"] = hack[i].find('a',class_='challenge-card-wrapper').get('href','')
+    data["Tag"] = hack[i].find('span',class_='post-card-tags').text.strip(' \t\n\r')
+    data["Blog-Title"] = hack[i].find('h2',class_='post-card-title').text.strip(' \t\n\r')
+    # data["company-name"] =[element.text for element in hack[i].find_all("div", "company-details ellipsis")]
+    # data["Event-link"] = hack[i].find('post-card-tags',class_='challenge-card-wrapper').get('href','')
     dic.append(data)
 print(dic)
 
