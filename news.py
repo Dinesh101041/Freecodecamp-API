@@ -12,7 +12,9 @@ for i in range(0,len(hack)):
     data["Blog-Title"] = hack[i].find('h2',class_='post-card-title').text.strip(' \t\n\r')
     data["Blog-link"] = hack[i].find('a',class_='post-card-image-link').get('href')
     data["Blog-link"]="https://www.freecodecamp.org"+data["Blog-link"]
-   
+    data["Author"] = hack[i].find('a',class_='meta-item').text.strip(' \t\n\r')
+    data["Author-profile"] = hack[i].find('a',class_='meta-item').get('href')
+    data["Author-profile"]="https://www.freecodecamp.org"+data["Author-profile"]
     dic.append(data)
 print(dic)
 
