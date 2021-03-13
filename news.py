@@ -1,9 +1,9 @@
 from bs4 import BeautifulSoup as bs4
 import requests
 
-x= requests.get('https://www.hackerearth.com/challenges/').text
+x= requests.get('https://www.freecodecamp.org/news/').text
 soup=bs4(x,'lxml')
-hack = soup.find_all('div',class_ = 'challenge-card-modern')
+hack = soup.find_all('article',class_ = 'post-card')
 print(len(hack))
 dic=[]
 for i in range(0,len(hack)):
