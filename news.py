@@ -10,8 +10,9 @@ for i in range(0,len(hack)):
     data={}
     data["Tag"] = hack[i].find('span',class_='post-card-tags').text.strip(' \t\n\r')
     data["Blog-Title"] = hack[i].find('h2',class_='post-card-title').text.strip(' \t\n\r')
-    # data["company-name"] =[element.text for element in hack[i].find_all("div", "company-details ellipsis")]
-    # data["Event-link"] = hack[i].find('post-card-tags',class_='challenge-card-wrapper').get('href','')
+    data["Blog-link"] = hack[i].find('a',class_='post-card-image-link').get('href')
+    data["Blog-link"]="https://www.freecodecamp.org"+data["Blog-link"]
+   
     dic.append(data)
 print(dic)
 
