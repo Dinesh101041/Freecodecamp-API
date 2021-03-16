@@ -6,7 +6,7 @@ def getblog(value):
         if (value == 'blog'):
             x = requests.get('https://www.freecodecamp.org/news/').text
         else:
-            x = requests.get(f"https://www.freecodecamp.org/news/{value}").text
+            x = requests.get(f"https://www.freecodecamp.org/news/tag/{value}").text
         soup=bs4(x,'lxml')
         hack = soup.find_all('article',class_ = 'post-card')
         val={}
@@ -19,7 +19,7 @@ def getblog(value):
             data["Blog-link"]="https://www.freecodecamp.org"+data["Blog-link"]
             data["Author"] = hack[i].find('a',class_='meta-item').text.strip(' \t\n\r')
             val["dic"].append(data)
-        return dic
+        return val
     except Exception as e:
         return {"status":False,"error":e}
 

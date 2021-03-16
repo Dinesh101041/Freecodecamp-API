@@ -8,7 +8,7 @@ app.url_map.strict_slashes = False
 
 @app.route("/")
 def news():
-    x={"This is free code camp api to fetch freecodecamp blogs"}
+    x="This is free code camp api to fetch freecodecamp blogs"
     return x
 
 @app.route("/<string>")
