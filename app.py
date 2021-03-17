@@ -1,15 +1,15 @@
 from flask import Flask , jsonify
+from flask import render_template
 import requests
 from camp import getblog
 
 
 app =  Flask(__name__)
-app.url_map.strict_slashes = False
+# app.url_map.strict_slashes = False
 
 @app.route("/")
 def news():
-    x="This is free code camp api to fetch freecodecamp blogs"
-    return x
+   return render_template('index.html')
 
 @app.route("/<string>")
 def blog(string):
