@@ -3,12 +3,15 @@ import requests
 
 def getblog(value):
     try:
-        if (value == 'blog'):
+        #getting all the values
+        if (value == 'all'):
             x = requests.get('https://www.freecodecamp.org/news/').text
         else:
+            # getting the response based on particular tag
             x = requests.get(f"https://www.freecodecamp.org/news/tag/{value}").text
         soup=bs4(x,'lxml')
         hack = soup.find_all('article',class_ = 'post-card')
+        #intitializing a dictionary
         val={}
         val["dic"]=[]
         for i in range(0,len(hack)):
