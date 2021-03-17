@@ -1,5 +1,5 @@
 # Freecodecamp-Blog API
-This  unofficial freecodecamp blog Api to fetch the blogs posted on Freecodecamp
+This is unofficial freecodecamp blog Api to fetch the blogs posted on Freecodecamp
 
 # Usage
 For All category blogs make request as <br>
@@ -47,5 +47,5 @@ The Response will be in the format JSON like below
 # Contribution 
   Any issue or pull request are welcome :grinning:
   
-  if you like this or it helps you show some :heart: and :star: 
+  If you like this or it helps you show some :heart: and :star: 
   
