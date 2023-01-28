@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup as bs4
 import requests
 
-def getblog(value):
+def getBlogData(value):
     try:
         #getting all the values
         if (value == 'all'):
@@ -11,11 +11,11 @@ def getblog(value):
             x = requests.get(f"https://www.freecodecamp.org/news/tag/{value}").text
         soup=bs4(x,'lxml')
         hack = soup.find_all('article',class_ = 'post-card')
-        #intitializing a dictionary
-        val={}
-        val["dic"]=[]
+        #initializing a dictionary
+        val = {}
+        val["dic"] = []
         for i in range(0,len(hack)):
-            data={}
+            data = {}
             data["Tag"] = hack[i].find('span',class_='post-card-tags').text.strip(' \t\n\r')
             data["Blog-Title"] = hack[i].find('h2',class_='post-card-title').text.strip(' \t\n\r')
             data["Blog-link"] = hack[i].find('a',class_='post-card-image-link').get('href')

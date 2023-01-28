@@ -1,7 +1,7 @@
 from flask import Flask , jsonify
 from flask import render_template
 import requests
-from camp import getblog
+from camp import getBlogData
 
 
 app =  Flask(__name__)
@@ -13,7 +13,7 @@ def news():
 
 @app.route("/<string>")
 def blog(string):
-    x=getblog(string)
+    x = getBlogData(string)
     return x
 
 if __name__ == "__main__":
